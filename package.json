@@ -1,0 +1,23 @@
+{
+  "name": "fsd-project",
+  "version": "1.0.0",
+  "description": "Expense tracker",
+  "license": "ISC",
+  "author": "XYZ",
+  "type": "commonjs",
+  "main": "script.js",
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run dev",
+"dev": "concurrently \"cd backend && npm run dev\" \"wait-on http://localhost:5000\" \"serve -s frontend -l 3000 --cors\" \"open http://localhost:3000\""
+  },
+  "devDependencies": {
+"concurrently": "^7.6.0",
+    "wait-on": "^7.2.0",
+    "open": "^10.1.0",
+"serve": "^14.2.1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
